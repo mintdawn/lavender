@@ -53,7 +53,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/mintdawn/dsCapstone">Project GitHub</a>
+                  <a class="nav-link" href="https://github.com/mintdawn/lavender">Project GitHub</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="https://portfolio.unicornpoint.net/">Portfolio</a>
