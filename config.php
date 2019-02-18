@@ -1,6 +1,5 @@
 <?php
-/* Database credentials. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
+/* Database credentials. 
 define('DB_SERVER', 'capstoneserver.mysql.database.azure.com:3306');
 define('DB_USERNAME', 'mintdawn@capstoneserver');
 define('DB_PASSWORD', 'Capstone!');
