@@ -13,7 +13,7 @@ This is my final project for the Rasmussen Computer Science Capstone. The assign
 * A minimum of 3 app screens (accessed after login) for users to access client information appropriate to the company (such as "About Us" or "Services" or "Current Orders")
 * A properly functioning Sign Out button, available on all pages
 * A screen confirming successful sign out.
-* I am still learning how to code so I adapted code from [this tutorial page](https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php). It was actually really easy to implement. Most things are like pulling teeth for me at this point.
+* I am still learning how to program so I adapted code from [this tutorial page](https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php). It was actually really easy to implement. Most things are like pulling teeth for me at this point. I also drew heavily from the Bootstrap documentation page.
 
 # Work for Module 3
 
