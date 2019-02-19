@@ -10,10 +10,6 @@
   background-position: center;
 }
 
-#register-body {
-  background-image: linear-gradient(to right, black, violet, white, violet, black);
-}
-
 hr {
     color: darkviolet;
     background-color: darkviolet;
@@ -49,4 +45,27 @@ hr {
     border-radius: 20px;
     margin: 20px;
     padding: 20px;
+}
+
+.footer-links {
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links:hover {
+  color: darkviolet;
+  text-decoration: none;
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.footer-links:visited {
+  color: ghostwhite;
+}
+
+.footer-links:active {
+  color: deeppink;
 }

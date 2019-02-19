@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lavender Acres Essential Oils | Register</title>
+    <title>Lavender Acres Essential Oils | Create Log In</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -93,16 +93,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link nav-item" href="support.php">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a href="register.php" class="nav-link">Create Login</a>
+              </li>
+              <li class="nav-item">
+                  <a href="index.php" class="nav-link">Log In</a>
+              </li>
+              <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
               </li>
               <li class="nav-item">
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
               </li>
           </ul>
       </div>
@@ -110,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- Sign Up Form -->
     <div class="container bg-light col-md-6 m-4 p-4 rounded mx-auto">
-        <h2>Sign Up</h2>
+        <h2>Create a Log In Account</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">

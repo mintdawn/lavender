@@ -44,23 +44,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                   <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link nav-item" href="support.php">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a href="register.php" class="nav-link">Create Login</a>
+              </li>
+              <li class="nav-item">
+                  <a href="index.php" class="nav-link">Log In</a>
+              </li>
+              <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
               </li>
               <li class="nav-item">
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
               </li>
           </ul>
       </div>
   </nav>
 
     <!-- List the Oils -->
-    <div class="row" style="background-color: #f4e2f4;">
+    <div class="container-fluid p-4 mx-auto" style="background-color: #f0f0f0;">
+        <div class="container-fluid p-4 bg-light text-center text-secondary">
+        <h1>Essential Oil Varieties</h1>
+        <div class="row">
 
         <?php
 
@@ -87,8 +93,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     $desc = $row['description'];
                     $image = $row['image'];
                     echo '<div class="col-md-4">';
-                    echo '<div class="card result text-center m-2 p-4">';
-                    echo '<h4 class="text-capitalize">'.$id.'.     '.$name.'</h4>';
+                    echo '<div class="result text-center m-2 p-4">';
+                    echo '<h4 class="text-capitalize">'.$name.'</h4>';
                     echo '<img src="'.$image.'" class="oil-img mx-auto rounded" /><br>';
                     echo '<p><strong>Traditional Use:</strong>  '.$remedy.'</p>';
                     echo '<p><strong>Description:</strong>  '.$desc.'</p></div></div>';
@@ -99,5 +105,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
         ?>
     </div>
+  </div>
+  <!-- page footer -->
+  <footer class="page-footer text-light" style="background-color: darkviolet;">
+    <div class="container-fluid mx-auto text-center">
+      <div class="row">
+        <div class="col p-4">
+          <a href="https://www.unicornpoint.net" class="footer-links" target="_blank">Unicorn Point</a>
+        </div>
+        <div class="col p-4">
+          <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">Lavender Acres GitHub Repository</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

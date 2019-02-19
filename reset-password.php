@@ -82,16 +82,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link nav-item" href="support.php">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a href="register.php" class="nav-link">Create Login</a>
+              </li>
+              <li class="nav-item">
+                  <a href="index.php" class="nav-link">Log In</a>
+              </li>
+              <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
               </li>
               <li class="nav-item">
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
               </li>
           </ul>
       </div>
@@ -104,12 +107,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
                 <label>New Password</label>
-                <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>">
+                <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>" required>
                 <span class="help-block"><?php echo $new_password_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                 <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control">
+                <input type="password" name="confirm_password" class="form-control" required>
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">

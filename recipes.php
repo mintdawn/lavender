@@ -44,25 +44,45 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                   <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link nav-item" href="support.php">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a href="register.php" class="nav-link">Create Login</a>
+              </li>
+              <li class="nav-item">
+                  <a href="index.php" class="nav-link">Log In</a>
+              </li>
+              <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
               </li>
               <li class="nav-item">
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
-              </li>
           </ul>
       </div>
   </nav>
 
-  <div class="container col-md-6 p-4 m-4 mx-auto">
+  <div class="container-fluid p-4 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
+    <div class="container-fluid p-4 bg-light text-center text-secondary">
     <h1>Essential Oil Recipes</h1>
+    <div class="row justify-content-center m-4 p-2 rounded bg-light">
+      <p>This page should contain cards that display randomly generated oil blends. I might also put some information on how to use essential oils and how to mix them into carrier oils.</p>
 
     </div>
-
+  </div>
+</div>
+<!-- page footer -->
+<footer class="page-footer text-light" style="background-color: darkviolet;">
+  <div class="container-fluid mx-auto text-center">
+    <div class="row">
+      <div class="col p-4">
+        <a href="https://www.unicornpoint.net" class="footer-links" target="_blank">Unicorn Point</a>
+      </div>
+      <div class="col p-4">
+        <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">Lavender Acres GitHub Repository</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

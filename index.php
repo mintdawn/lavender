@@ -92,16 +92,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link nav-item" href="support.php">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a href="register.php" class="nav-link">Create Login</a>
+              </li>
+              <li class="nav-item">
+                  <a href="index.php" class="nav-link">Log In</a>
+              </li>
+              <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
               </li>
               <li class="nav-item">
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
               </li>
           </ul>
       </div>
@@ -128,6 +131,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
       </form>
   </div>
-
 </body>
 </html>
