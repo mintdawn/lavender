@@ -22,29 +22,28 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
     <link rel="icon" type="image/png" href="img/icon.png" />
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
 </head>
 <body>
-  <img src="img/capstoneLogo.png" class="w-100" id="oil-logo" />
+  <img src="img/capstoneLogo.png" class="img-fluid" id="oil-logo" />
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="welcome.php">Lavender Acres</a>
+  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
+    <a class="navbar-brand" href="welcome.php">
+    <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
+    Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="nav navbar-nav nav-fill">
               <li class="nav-item">
-                  <a class="nav-link" href="oillist.php">Our Essential Oils</a>
+                  <a class="nav-link nav-item" href="oillist.php">Our Essential Oils</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="recipes.php">Recipes</a>
+                  <a class="nav-link nav-item" href="recipes.php">Recipes</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about.php">More Information</a>
+                  <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
@@ -53,18 +52,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/mintdawn/lavender">Project GitHub</a>
+                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="https://portfolio.unicornpoint.net/">Portfolio</a>
+                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
               </li>
           </ul>
       </div>
   </nav>
 
-
-    <div class="page-header">
-        <h2>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h2>
+    <div class="container-fluid p-4 mx-auto bg-light">
+        <h3>Welcome, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h3>
+        <hr>
     </div>
 </body>
 </html>

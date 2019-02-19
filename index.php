@@ -1,89 +1,58 @@
 <?php
-// Initialize the session
+// Start the session and redirect people who aren't logged in.
 session_start();
-
-// Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: welcome.php");
     exit;
 }
 
-// Include config file
+// log into the site
 require_once "config.php";
 
-// Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
-
-// Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
     } else{
         $username = trim($_POST["username"]);
     }
 
-    // Check if password is empty
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
     }
 
-    // Validate credentials
     if(empty($username_err) && empty($password_err)){
-        // Prepare a select statement
         $sql = "SELECT id, username, password FROM users WHERE username = ?";
-
         if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
-
-            // Set parameters
             $param_username = $username;
-
-            // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                // Store result
                 mysqli_stmt_store_result($stmt);
-
-                // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){
-                    // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            // Password is correct, so start a new session
                             session_start();
-
-                            // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-
-                            // Redirect user to welcome page
                             header("location: welcome.php");
                         } else{
-                            // Display an error message if password is not valid
-                            $password_err = "The password you entered was not valid.";
+                            $password_err = "This is not a valid password.";
                         }
                     }
                 } else{
-                    // Display an error message if username doesn't exist
-                    $username_err = "No account found with that username.";
+                    $username_err = "This username can not be found.";
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Sorry, something went wrong. Please, try again.";
             }
         }
-
-        // Close statement
         mysqli_stmt_close($stmt);
     }
-
-    // Close connection
     mysqli_close($link);
 }
 ?>
@@ -103,38 +72,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body id="index-body">
 
-<!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="welcome.php">Lavender Acres</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="oillist.php">Our Essential Oils</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="recipes.php">Recipes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.php">More Information</a>
-            </li>
-            <li class="nav-item">
-                <a href="logout.php" class="nav-link">Log Out</a>
-            </li>
-            <li class="nav-item">
-                <a href="reset-password.php" class="nav-link">Reset Password</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/mintdawn/lavender">Project GitHub</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://portfolio.unicornpoint.net/">Portfolio</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+  <!-- navbar -->
+  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
+    <a class="navbar-brand" href="welcome.php">
+    <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
+    Lavender Acres</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav nav-fill">
+              <li class="nav-item">
+                  <a class="nav-link nav-item" href="oillist.php">Our Essential Oils</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-item" href="recipes.php">Recipes</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-item" href="about.php">More Information</a>
+              </li>
+              <li class="nav-item">
+                  <a href="logout.php" class="nav-link">Log Out</a>
+              </li>
+              <li class="nav-item">
+                  <a href="reset-password.php" class="nav-link">Reset Password</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
 
   <!-- login form -->
   <div class="container bg-light col-md-6 m-4 p-4 rounded mx-auto">

@@ -1,8 +1,6 @@
 <?php
-// Initialize the session
+// Start the session and redirect people who aren't logged in.
 session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.php");
     exit;
@@ -13,6 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Welcome</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700" rel="stylesheet" />
@@ -20,27 +19,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 <body>
-  <img src="img/capstoneLogo.png" class="w-100" id="oil-logo" />
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="welcome.php">Lavender Acres</a>
+  <img src="img/capstoneLogo.png" class="img-fluid" id="oil-logo" />
+
+  <!-- navbar -->
+  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
+    <a class="navbar-brand" href="welcome.php">
+    <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
+    Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="nav navbar-nav nav-fill">
               <li class="nav-item">
-                  <a class="nav-link" href="oillist.php">Our Essential Oils</a>
+                  <a class="nav-link nav-item" href="oillist.php">Our Essential Oils</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="recipes.php">Recipes</a>
+                  <a class="nav-link nav-item" href="recipes.php">Recipes</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about.php">More Information</a>
+                  <a class="nav-link nav-item" href="about.php">More Information</a>
               </li>
               <li class="nav-item">
                   <a href="logout.php" class="nav-link">Log Out</a>
@@ -49,10 +50,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                   <a href="reset-password.php" class="nav-link">Reset Password</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/mintdawn/lavender">Project GitHub</a>
+                  <a class="nav-link nav-item" href="https://github.com/mintdawn/lavender">Project GitHub</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="https://portfolio.unicornpoint.net/">Portfolio</a>
+                  <a class="nav-link nav-item" href="https://portfolio.unicornpoint.net/">Portfolio</a>
               </li>
           </ul>
       </div>
@@ -67,8 +68,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         $username = 'unicorn_noodleview';
         $password = '-_4tTrR3LBbW';
         $db_name = 'unicorn_learning';
-
-        //Establishes the connection
 
         $conn = mysqli_init();
         mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
