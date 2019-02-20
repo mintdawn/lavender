@@ -92,10 +92,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       $remedy = $row['remedy'];
                       $desc = $row['description'];
                       $image = $row['image'];
-                      echo '<div class="col-md-4">';
-                      echo '<div class="result text-center m-2 p-4">';
+                      echo '<div class="col-md-3">';
+                      echo '<div class="result text-center p-4">';
                       echo '<h4 class="text-capitalize">'.$name.'</h4>';
-                      echo '<img src="'.$image.'" class="oil-img mx-auto rounded" /><br>';
+                      echo '<img src="'.$image.'" class="oil-img mx-auto rounded-circle m-2 p-2" /><br>';
                       echo '<p><strong>Traditional Use:</strong>  '.$remedy.'</p>';
                       echo '<p><strong>Description:</strong>  '.$desc.'</p></div></div>';
                   }
@@ -115,7 +115,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <a href="https://www.unicornpoint.net" class="footer-links" target="_blank">Unicorn Point</a>
         </div>
         <div class="col p-4">
-          <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">Lavender Acres GitHub Repository</a>
+          <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">GitHub Repo</a>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@
   <div class="container-fluid p-4 mx-auto" style="background-color: #f0f0f0;">
       <div class="container-fluid p-4 text-center text-secondary bg-light">
       <h1>About Lavender Acres</h1>
-        <div class="row justify-content-center m-4 p-2 rounded bg-light border border-secondary">
+        <div class="row justify-content-center m-md-4 p-2 rounded bg-light border border-secondary">
           <div class="col-md-3 p-2">
             <img src="img/stock1.jpg" class="img-fluid rounded">
           </div>
@@ -66,7 +66,7 @@
             <p>Lavender Acres is a ficticious company created for a college capstone project. You can not buy essential oils here. This page was created for a final grade and is being kept online as part of the portfolio for Unicorn Point. Unicorn Point is the personal website of Dawn Summerall, a computer science student and web developer. </p>
           </div>
         </div>
-        <div class="row justify-content-center m-4 p-2 rounded bg-light border border-secondary">
+        <div class="row justify-content-center m-md-4 p-2 rounded bg-light border border-secondary">
           <div class="col-md-3 p-2">
             <img src="img/stock2.jpg" class="img-fluid rounded">
           </div>
@@ -75,7 +75,7 @@
             <p>You can visit the <a href="https://www.unicornpoint.net">Unicorn Point Website</a> for more information about this and other projects.</p>
           </div>
         </div>
-        <div class="row justify-content-center m-4 p-2 rounded bg-light border border-secondary">
+        <div class="row justify-content-center m-md-4 p-2 rounded bg-light border border-secondary">
           <div class="col-md-3 p-2">
             <img src="img/stock3.jpg" class="img-fluid rounded">
           </div>
@@ -84,7 +84,7 @@
             <p>Essential oils are fragrant compounds extracted from plants that are famed for their holistic properties. Some oils are thought to have physical healing properties. For example, clove can numb a toothache, mint can block the pain signal and citronella can repel mosquitoes. It is also believed that difusing essential oils or using them topically in diluted form can provide emotional and nervous system benefits. Essential oils can be used in many ways and in many situations.</p>
           </div>
         </div>
-        <div class="row justify-content-center m-4 p-2 rounded bg-light border border-secondary">
+        <div class="row justify-content-center m-md-4 p-2 rounded bg-light border border-secondary">
           <div class="col-md-3 p-2">
             <img src="img/stock4.jpg" class="img-fluid rounded">
           </div>
@@ -109,7 +109,7 @@
             <a href="https://www.unicornpoint.net" class="footer-links" target="_blank">Unicorn Point</a>
           </div>
           <div class="col p-4">
-            <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">Lavender Acres GitHub Repository</a>
+            <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">GitHub Repo</a>
           </div>
         </div>
       </div>

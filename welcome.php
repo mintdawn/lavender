@@ -64,10 +64,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
   </nav>
 
-    <div class="container-fluid p-4 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
-      <div class="container-fluid p-4 bg-light text-center text-secondary">
+    <div class="container-fluid p-md-4 p-2 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
+      <div class="container-fluid bg-light text-center text-secondary">
       <h1>Welcome to Lavender Acres</h1>
-        <div class="row m-4 p-2 rounded bg-light text-left">
+        <div class="row p-2 rounded bg-light text-left">
           <h5>Account info for: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h5>
           <br>
           <p>I am thinking about putting a sort of dashboard here with the various account functions prominently featured on the page. I could also make a link to a page that is a combination of FAQ on how to use the site and screen shots of how to use the login, create account, change password and logout features. It could be named support.php and it could be viewable without being logged in.</p>
@@ -82,7 +82,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <a href="https://www.unicornpoint.net" class="footer-links" target="_blank">Unicorn Point</a>
           </div>
           <div class="col p-4">
-            <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">Lavender Acres GitHub Repository</a>
+            <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">GitHub Repo</a>
           </div>
         </div>
       </div>

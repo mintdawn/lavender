@@ -22,6 +22,10 @@ hr {
     width: 200px;
 }
 
+#oil-logo {
+  width: 100%;
+}
+
 #navi {
     font-size: 1.5em;
     background-color: darkviolet;
