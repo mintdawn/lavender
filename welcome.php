@@ -64,16 +64,52 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
   </nav>
 
-    <div class="container-fluid p-md-4 p-2 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
-      <div class="container-fluid bg-light text-center text-secondary">
-      <h1>Welcome to Lavender Acres</h1>
-        <div class="row p-2 rounded bg-light text-left">
-          <h5>Account info for: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h5>
-          <br>
-          <p>I am thinking about putting a sort of dashboard here with the various account functions prominently featured on the page. I could also make a link to a page that is a combination of FAQ on how to use the site and screen shots of how to use the login, create account, change password and logout features. It could be named support.php and it could be viewable without being logged in.</p>
-        </div>
-      </div>
-    </div>
+  <!-- image carousel -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="oillist.php"><img class="w-100" src="img/slides/slide01.jpg" alt="essential oils"></a>
+                <div class="container-fluid text-center" id="slide">
+                  <a  style="text-decoration: none;" class="text-light" href="oillist.php">20 oils you can't live without.</a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="recipes.php"><img class="w-100" src="img/slides/slide02.jpg" alt="recipes"></a>
+                <div class="container-fluid text-center" id="slide">
+                  <a style="text-decoration: none;" class="text-light" href="recipes.php">Learn how to blend.</a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="about.php"><img class="w-100" src="img/slides/slide03.jpg" alt="Third slide"></a>
+                <div class="container-fluid text-center" id="slide">
+                  <a style="text-decoration: none;" class="text-light" href="about.php">The story behind Lavender Acres</a>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="container-fluid bg-light p-2 text-center">
+            <h4>What Oils are Right for Me?</h4>
+          </div>
+          <div class="container-fluid bg-dark mx-auto text-center">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Cfi8kNM2pEg" allowfullscreen></iframe>
+            </div>
+          </div>
+          <img src="img/oils01.jpg" class="img-fluid" id="oil-logo" />
+
     <!-- page footer -->
     <footer class="page-footer text-light" style="background-color: darkviolet;">
       <div class="container-fluid mx-auto text-center">

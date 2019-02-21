@@ -10,6 +10,20 @@
   background-position: center;
 }
 
+#slide {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: ghostwhite;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+}
+
 hr {
     color: darkviolet;
     background-color: darkviolet;

@@ -69,21 +69,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="row">
 
           <?php
-
-          $host = 'capstoneserver.mysql.database.azure.com:3306';
-          $username = 'mintdawn@capstoneserver';
-          $password = 'Capstone!';
-          $db_name = 'mydb';
-
-          $conn = mysqli_init();
-          mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
-          if (mysqli_connect_errno($conn)) {
-              die('Failed to connect to MySQL: '.mysqli_connect_error());
-          }
-
-          else
-          {
-              $result = $conn->query("SELECT * FROM oils");
+          // show a neat list of the essential oils
+              include 'config.php';
+              $result = $link->query("SELECT * FROM oils");
               if (($result != 0) && ($result->num_rows > 0))
               {
                   while($row = $result->fetch_assoc()) {
@@ -100,9 +88,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       echo '<p><strong>Description:</strong>  '.$desc.'</p></div></div>';
                   }
               }
-              mysqli_close($conn);
-          }
-
+              mysqli_close($link);
           ?>
       </div>
     </div>

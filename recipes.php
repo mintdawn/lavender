@@ -62,7 +62,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
   </nav>
 
-  <div class="container-fluid p-md-4 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
+  <div class="container-fluid p-md-2 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
     <div class="container p-md-4 bg-light text-center text-secondary">
     <h1>Random Essential Oil Recipe</h1>
     <br>
@@ -83,7 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             mysqli_close($link);
         ?>
         <!-- use a drop down menu to list all oils used for a specific treatment -->
-        <hr>
+        <img src="img/oils01.jpg" class="img-fluid" id="oil-logo" />
         <h3>View all the oils used for a certain purpose</h3>
         <br>
         <form method="post" enctype="multipart/form-data">
