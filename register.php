@@ -112,7 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </nav>
 
   <!-- Sign Up Form -->
-    <div class="container bg-light col-md-6 m-4 p-4 rounded mx-auto">
+    <div class="container bg-light col-md-6 m-md-4 p-md-4 rounded mx-auto">
         <h2>Create a Log In Account</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

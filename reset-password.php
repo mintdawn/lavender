@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </nav>
 
 <!-- Reset Password Form -->
-    <div class="container bg-light col-md-6 m-4 p-4 rounded mx-auto">
+    <div class="container bg-light col-md-6 m-md-4 p-md-4 rounded mx-auto">
         <h2>Change Your Password</h2>
         <p>Enter a new password and confirm it to change your password.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
