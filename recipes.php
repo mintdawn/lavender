@@ -62,8 +62,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
   </nav>
 
-  <div class="container-fluid p-md-2 mx-auto text-center text-secondary" style="background-color: #f0f0f0;">
-    <div class="container p-md-4 bg-light text-center text-secondary">
+  <div class="container pt-md-4 pb-md-4 mx-auto text-center text-secondary" style="background-color: white;">
     <h1>Random Essential Oil Recipe</h1>
     <br>
       <p>Add 6 drops of each oil into either a difuser with water or a carrier oil such as grape seed or jojoba oil. Difuser blends should be difused into a room and inhaled to provide desired effects. Oils blended into a carrier oil should be massaged into the bottoms of the feet or placed on the affected area for best results.</p>
@@ -83,7 +82,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             mysqli_close($link);
         ?>
         <!-- use a drop down menu to list all oils used for a specific treatment -->
-        <img src="img/oils01.jpg" class="img-fluid" id="oil-logo" />
+        <img src="img/oils01.jpg" class="img-fluid p-2" id="oil-logo" />
         <h3>View all the oils used for a certain purpose</h3>
         <br>
         <form method="post" enctype="multipart/form-data">
@@ -108,7 +107,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
       </form>
 
-      <div class="container mx-auto text-center bg-light p-md-4">
+      <div class="container mx-auto text-center p-md-4" style="background-color: white;">
         <div class="row justify-content-center">
         <?php
       // display particular oils based on drop down choice.
@@ -137,8 +136,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
       </div>
     </div>
-  </div>
-</div>
 <!-- page footer -->
 <footer class="page-footer text-light" style="background-color: darkviolet;">
   <div class="container-fluid mx-auto text-center">

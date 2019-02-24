@@ -63,8 +63,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </nav>
 
     <!-- List the Oils -->
-    <div class="container-fluid p-4 mx-auto" style="background-color: #f0f0f0;">
-        <div class="container-fluid p-4 bg-light text-center text-secondary">
+    <div class="container-fluid p-4 mx-auto" style="background-color: white;">
+        <div class="container-fluid p-4 text-center text-secondary">
         <h1>Essential Oil Varieties</h1>
         <div class="row">
 
