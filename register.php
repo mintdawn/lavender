@@ -112,6 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </nav>
 
   <!-- Sign Up Form -->
+  <div class="row m-2 justify-content-center">
     <div class="container bg-light col-md-6 m-md-4 p-md-4 rounded mx-auto">
         <h2>Create a Log In Account</h2>
         <p>Please fill this form to create an account.</p>
@@ -138,5 +139,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Already have an account? <a href="index.php">Login here</a>.</p>
         </form>
     </div>
+  </div>
 </body>
 </html>

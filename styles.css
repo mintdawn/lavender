@@ -87,3 +87,7 @@ hr {
 .footer-links:active {
   color: deeppink;
 }
+
+#center-screen {
+  margin-top: 10%;
+}
