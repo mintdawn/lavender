@@ -26,9 +26,9 @@ I reformatted a lot of the visual appearance and added footers to several of the
 # Work for Module 4
 
 * Create another information screen. For this I put content on the "recipes" page.
-** The page will generate a random blend. It will pull 3 oils from the database, display them and tell what they do.
-** The page also has a drop down feature that lists essential oils by their traditional use. For example, oils that are traditionally used to help people relax will be listed if the user selects "relax" from the drop down menu.
+  * The page will generate a random blend. It will pull 3 oils from the database, display them and tell what they do.
+  * The page also has a drop down feature that lists essential oils by their traditional use. For example, oils that are traditionally used to help people relax will be listed if the user selects "relax" from the drop down menu.
 * Create a Logout page.
-** I already had a log out button and code but, I added a redirect page so there is an official page that says "You have logged out successfully." and then from there redirects to the front page again. This took way longer than it should have. The words were hugging the top of the browser. I finally got them to sit somewhere more comfortable by adding "margin-top: 10%" to the styles.css. The ID# for that style is "center-screen". 
+  * I already had a log out button and code but, I added a redirect page so there is an official page that says "You have logged out successfully." and then from there redirects to the front page again. This took way longer than it should have. The words were hugging the top of the browser. I finally got them to sit somewhere more comfortable by adding "margin-top: 10%" to the styles.css. The ID# for that style is "center-screen".
 
 I keep adjusting the log in, register and reset password page. I keep centering them but I keep losing that change. I am not sure what I am doing to make this happen.
