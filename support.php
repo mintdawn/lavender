@@ -11,14 +11,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Laila:400,700" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 <body>
   <img src="img/capstoneLogo.png" class="img-fluid" id="oil-logo" />
 
   <!-- navbar -->
-  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
-    <a class="navbar-brand" href="welcome.php">
+  <nav class="nav navbar navbar-expand-lg navbar-light nav-fill">
+    <a class="navbar-brand p-2" href="welcome.php">
     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
     Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,38 +55,45 @@
       </div>
   </nav>
 
-  <div class="container-fluid p-4 mx-auto text-center text-secondary" style="background-color: white;">
-    <div class="container-fluid p-md-2 rounded">
-      <h1>Support Page</h1>
-      <div class="row justify-content-center m-md-4 p-2 rounded" style="background-color: white;">
-        <div class="col-md-6 mb-4 p-md-4 rounded text-left">
+<!-- section header -->
+<div class="container-fluid section-head text-center">
+  <h2>Lavender Acres Support</h2>
+</div>
+
+<!-- content section -->
+  <div class="container-fluid p-2 mx-auto text-center text-secondary" style="background-color: white;">
+      <div class="row justify-content-around">
+        <div class="col-md-5 rounded text-left support">
           <h4>How can I create a login?</h4>
           <p>You can create a login by clicking on the "Create Login" button on the main navigation bar or by navigating to the home page and clicking the link on the login screen.</p>
           <img src="img/support03.jpg" class="img-fluid p-2">
           <img src="img/support04.jpg" class="img-fluid p-2">
         </div>
-        <div class="col-md-6 mb-4 p-md-4 rounded text-left">
+        <div class="col-md-5 rounded text-left support">
           <h4>How do I log in?</h4>
           <p>You can log into our site by clicking the link that says "Log In" on the main navigation bar near the top of every page or by navigating to our home page and logging in from that screen. You can also click the large logos at the top of the page or the Lavender Acres link in the main navigation menu to return to the front page and login.</p>
           <img src="img/support01.jpg" class="img-fluid p-2">
           <img src="img/support02.jpg" class="img-fluid p-2">
         </div>
       </div>
-      <div class="row justify-content-center m-md-4 p-2 rounded" style="background-color: white;">
-        <div class="col-md-6 mb-4 p-md-4 rounded text-left">
+      <div class="row justify-content-around">
+        <div class="col-md-5 rounded text-left support">
           <h4>I forgot my password. How can I change it?</h4>
           <p>You can change your password by clicking on the "Reset Password" link on the main navigation menu near the top of every page. When you have arrived at the reset password page, choose a new password and enter it in both the "new password" and "confirm password" boxes and hit submit. You will then be redirected to the main login screen where you can log in with your username and new password. You must be logged in to change your password.</p>
           <img src="img/support05.jpg" class="img-fluid p-2">
           <img src="img/support06.jpg" class="img-fluid p-2">
         </div>
-        <div class="col-md-6 mb-4 p-md-4 rounded text-left">
+        <div class="col-md-5 rounded text-left support">
           <h4>How do I log out?</h4>
           <p>To maintain your privacy if you are using a shared computer, you should log out at the end of each session with our site. To log out, click the "Log Out" link located in the main navigation menu near the top of every page on the site. After you log out, you will be redirected to the main page in case you need to log in again.</p>
           <img src="img/support07.jpg" class="img-fluid p-2">
         </div>
       </div>
-      <h1>Frequently Asked Questions</h1>
-      <hr>
+      <!-- section header -->
+      <div class="container-fluid section-head text-center">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
       <h5>How can I contact someone from Lavender Acres?</h5>
       <p>Please, visit our contact form on the <a href="#">contact page</a> to email customer or technical support.</p>
       <p><strong>Contact Us By Phone</strong></p>
@@ -100,7 +108,6 @@
       <br>
       <h5>How can I find out more about Lavender Acres?</h5>
       <p>Please, visit our about page to find out more about the Lavender Acres company and brand. You can do this by clicking on the "More Information" link located in the main navigation menu located near the top of every page.</p>
-    </div>
   </div>
   <!-- page footer -->
   <footer class="page-footer text-light" style="background-color: darkviolet;">

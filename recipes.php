@@ -19,14 +19,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Laila:400,700" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 <body>
   <img src="img/capstoneLogo.png" class="img-fluid" id="oil-logo" />
 
   <!-- navbar -->
-  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
-    <a class="navbar-brand" href="welcome.php">
+  <nav class="nav navbar navbar-expand-lg navbar-light nav-fill">
+    <a class="navbar-brand p-2" href="welcome.php">
     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
     Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,10 +62,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           </ul>
       </div>
   </nav>
-
+  <!-- section header -->
+  <div class="container-fluid section-head text-center">
+    <h2>Oil Usage and Blending Suggestions</h2>
+  </div>
   <div class="container pt-md-4 pb-md-4 mx-auto text-center text-secondary" style="background-color: white;">
-    <h1>Random Essential Oil Recipe</h1>
-    <br>
       <p>Add 6 drops of each oil into either a difuser with water or a carrier oil such as grape seed or jojoba oil. Difuser blends should be difused into a room and inhaled to provide desired effects. Oils blended into a carrier oil should be massaged into the bottoms of the feet or placed on the affected area for best results.</p>
 
       <?php
@@ -76,15 +78,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 while($row = $result->fetch_assoc()) {
                       $name = $row['name'];
                       $remedy = $row['remedy'];
-                      echo '<p style="color: violet;"><strong>'.$name.' is good for '.$remedy.'</strong></p>';
+                      echo '<p style="color: darkviolet;"><strong>'.$name.' is good for '.$remedy.'</strong></p>';
                 }
               }
             mysqli_close($link);
         ?>
         <!-- use a drop down menu to list all oils used for a specific treatment -->
         <img src="img/oils01.jpg" class="img-fluid p-2" id="oil-logo" />
-        <h3>View all the oils used for a certain purpose</h3>
-        <br>
+        <h3>Understanding the Uses of Essential Oils</h3>
+        <p>Please, choose an oil from the drop down menu to see its traditional usage.</p>
         <form method="post" enctype="multipart/form-data">
         <div class="col-md-6 mx-auto form-group">
           <select class="form-control" name="remedy-select" id="remedy-select">
@@ -103,7 +105,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <option value="stress">stress</option>
           </select>
           <br>
-          <button type="submit" class="btn btn-dark">Submit</button>
+          <button type="submit" class="btn btn-dark btn-lg">Submit</button>
         </div>
       </form>
 

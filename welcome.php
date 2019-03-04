@@ -21,14 +21,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Laila:400,700" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 <body>
   <img src="img/capstoneLogo.png" class="img-fluid" id="oil-logo" />
 
   <!-- navbar -->
-  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
-    <a class="navbar-brand" href="welcome.php">
+  <nav class="nav navbar navbar-expand-lg navbar-light nav-fill">
+    <a class="navbar-brand p-2" href="welcome.php">
     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
     Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,10 +101,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <div class="container-fluid bg-light p-2 text-center">
-            <h4>What Oils are Right for Me?</h4>
+          <!-- section header -->
+          <div class="container-fluid section-head text-center">
+            <h2>Which Oils are Right for Me?</h2>
           </div>
-          <div class="container-fluid bg-dark mx-auto text-center">
+
+          <!-- Youtube Video -->
+          <div class="container-fluid bg-dark mx-auto text-center m-0">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Cfi8kNM2pEg" allowfullscreen></iframe>
             </div>

@@ -40,16 +40,22 @@ hr {
   width: 100%;
 }
 
-#navi {
-    font-size: 1.5em;
-    background-color: darkviolet;
-    font-family: 'IBM Plex Sans', sans-serif;
+.navbar {
+  background: #f2e3fa;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: 'Laila', serif;
+  font-weight: 700;
 }
-#navi a {
-    color: white;
+
+.navbar a {
+  color: black !important;
 }
-#navi a:hover {
-    color: violet;
+
+.navbar a:hover {
+  background: darkviolet;
+  color: white !important;
+  border-radius: 20px;
 }
 
 #frontBut {
@@ -90,4 +96,44 @@ hr {
 
 #center-screen {
   margin-top: 10%;
+}
+
+.support {
+  background-color: #f2e3fa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-head {
+  color: white;
+  background: darkviolet;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Laila', serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: 'Laila', serif !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+h3 {
+  font-family: 'Laila', serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+}
+
+h4 {
+  font-family: 'Laila', serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+h5 {
+  font-family: 'Laila', serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
 }

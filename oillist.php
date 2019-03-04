@@ -19,14 +19,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Laila:400,700" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 <body>
   <img src="img/capstoneLogo.png" class="img-fluid" id="oil-logo" />
 
   <!-- navbar -->
-  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
-    <a class="navbar-brand" href="welcome.php">
+  <nav class="nav navbar navbar-expand-lg navbar-light nav-fill">
+    <a class="navbar-brand p-2" href="welcome.php">
     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
     Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,10 +63,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
   </nav>
 
+  <!-- section header -->
+  <div class="container-fluid section-head text-center">
+    <h2>20 Oils to Kickstart Your Oil Collection</h2>
+  </div>
+
     <!-- List the Oils -->
-    <div class="container-fluid p-4 mx-auto" style="background-color: white;">
         <div class="container-fluid p-4 text-center text-secondary">
-        <h1>Essential Oil Varieties</h1>
         <div class="row">
 
           <?php
@@ -104,7 +108,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <a href="https://github.com/mintdawn/lavender" class="footer-links" target="_blank">GitHub Repo</a>
         </div>
       </div>
-    </div>
   </footer>
 </body>
 </html>

@@ -68,13 +68,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Laila:400,700" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 <body id="index-body">
 
   <!-- navbar -->
-  <nav class="nav navbar navbar-expand-lg navbar-light bg-light nav-fill">
-    <a class="navbar-brand" href="welcome.php">
+  <nav class="nav navbar navbar-expand-lg navbar-light nav-fill">
+    <a class="navbar-brand p-2" href="welcome.php">
     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top">
     Lavender Acres</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
