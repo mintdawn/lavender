@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="2;URL=index.php">
+    <meta http-equiv="refresh" content="2;URL=welcome.php">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lavender Acres Essential Oils | Official Homepage</title>
     <link rel="stylesheet" href="styles.css" />
@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container text-center" id="center-screen">
-      <h3>You have succesfully logged out.</h3>
+      <h3>You have successfully logged in. You are being redirected to the main.</h3>
     </div>
   </body>
 </html>

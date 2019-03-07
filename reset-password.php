@@ -2,10 +2,10 @@
 // Start the session and redirect people who aren't logged in.
 session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: index.php");
+    header("location: redirect-password.php");
     exit;
-}
-require_once "config.php";
+} else {
+include "config.php";
 
 // reset the user's password
 $new_password = $confirm_password = "";
@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $new_password_err = "Please enter the new password.";
     } elseif(strlen(trim($_POST["new_password"])) < 6){
         $new_password_err = "Password must have atleast 6 characters.";
-    } else{
+    } else {
         $new_password = trim($_POST["new_password"]);
     }
     if(empty(trim($_POST["confirm_password"]))){
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_id = $_SESSION["id"];
             if(mysqli_stmt_execute($stmt)){
                 session_destroy();
-                header("location: index.php");
+                header("location: success-password.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -43,6 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($stmt);
     }
     mysqli_close($link);
+}
 }
 ?>
 

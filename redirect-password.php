@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container text-center" id="center-screen">
-      <h3>You have succesfully logged out.</h3>
+      <h3>You need to be logged in to change your password.</h3>
     </div>
   </body>
 </html>

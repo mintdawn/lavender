@@ -32,3 +32,18 @@ I reformatted a lot of the visual appearance and added footers to several of the
   * I already had a log out button and code but, I added a redirect page so there is an official page that says "You have logged out successfully." and then from there redirects to the front page again. This took way longer than it should have. The words were hugging the top of the browser. I finally got them to sit somewhere more comfortable by adding "margin-top: 10%" to the styles.css. The ID# for that style is "center-screen".
 
 I keep adjusting the log in, register and reset password page. I keep centering them but I keep losing that change. I am not sure what I am doing to make this happen.
+
+# Work for Module 5
+
+Modifications and fixes for final project submission.
+* I improved flow and user communication by creating OBVIOUS redirect screens that narrate each step of the log in and log out process.
+* I made the drop down menu on the recipes page populate from the database.
+* I fixed the log out script so people who are not logged in receive a different message if they try and log out.
+* I made some of the colors on the site have better contrast so color blind or contrast impaired users can see the text and images more clearly.
+* I added a Google font to the headings and navbar.
+* I added a background hover effect to the links in the navbar so they stand out better.
+* I added a light background to the sections on the support page so each section stood out better and it was a little easier to tell where each section started and ended. It is easier to read and follow.
+* I changed the images on the about page to be full color images so they were easier to see for contrast impaired users. They were monochromatically filtered before.
+* The form fields for the create log in form are now "required".
+* The password reset page checks to see if the user is logged in or not and responds differently for each case.
+* The password reset page gives a successful response and redirect when the password is changed.

@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container text-center" id="center-screen">
-      <h3>You have succesfully logged out.</h3>
+      <h3>You have successfully created an account. You are now able to log in.</h3>
     </div>
   </body>
 </html>

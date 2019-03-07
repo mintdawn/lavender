@@ -83,30 +83,31 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               }
             mysqli_close($link);
         ?>
-        <!-- use a drop down menu to list all oils used for a specific treatment -->
+        <!-- auto populating list of traditional uses -->
         <img src="img/oils01.jpg" class="img-fluid p-2" id="oil-logo" />
         <h3>Understanding the Uses of Essential Oils</h3>
         <p>Please, choose an oil from the drop down menu to see its traditional usage.</p>
-        <form method="post" enctype="multipart/form-data">
-        <div class="col-md-6 mx-auto form-group">
-          <select class="form-control" name="remedy-select" id="remedy-select">
-            <option value="" selected>Please select a problem.</option>
-            <option value="nausea">nausea</option>
-            <option value="female issues">female issues</option>
-            <option value="grounding">grounding</option>
-            <option value="colds">colds</option>
-            <option value="pain">pain</option>
-            <option value="skin issues">skin issues</option>
-            <option value="uplifting">uplifting</option>
-            <option value="antibacterial">anti-bacterial</option>
-            <option value="focus">focus</option>
-            <option value="anxiety">anxiety</option>
-            <option value="depression">depression</option>
-            <option value="stress">stress</option>
-          </select>
+
+        <form class="col-md-6 mx-auto pt-md-2" method="post" name="remedy-select">
+          <div class="form-group">
+          <?php
+              // populate select menu from database
+              include 'config.php';
+              $result = $link->query("SELECT DISTINCT remedy FROM oils ORDER BY name ASC");
+              echo "<select class='form-control' name='remedy-select'>";
+              echo "<option value='' selected>Please select a problem.</option>";
+              while ($row = $result->fetch_assoc()) {
+
+                            unset($option);
+                            $option = $row['remedy'];
+                            echo '<option value="'.$option.'">'.$option.'</option>';
+          }
+              echo "</select>";
+              mysqli_close($link);
+          ?>
+        </div>
           <br>
           <button type="submit" class="btn btn-dark btn-lg">Submit</button>
-        </div>
       </form>
 
       <div class="container mx-auto text-center p-md-4" style="background-color: white;">

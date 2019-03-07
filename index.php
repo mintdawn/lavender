@@ -1,5 +1,4 @@
 <?php
-// Start the session and redirect people who aren't logged in.
 session_start();
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: welcome.php");
@@ -39,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            header("location: welcome.php");
+                            header("location: success-login.php");
                         } else{
                             $password_err = "This is not a valid password.";
                         }
@@ -115,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <div class="row m-2 justify-content-center">
     <div class="container bg-light col-md-6 m-md-4 p-md-4 rounded mx-auto">
         <h2>Login</h2>
-        <p>Please enter your name and password.</p>
+        <p>You need to be logged in to view all of the site's content. Please enter your name and password.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
