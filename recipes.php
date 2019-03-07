@@ -66,7 +66,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="container-fluid section-head text-center">
     <h2>Oil Usage and Blending Suggestions</h2>
   </div>
-  <div class="container pt-md-4 pb-md-4 mx-auto text-center text-secondary" style="background-color: white;">
+  <div class="container pt-md-4 pb-md-4 mx-auto text-center lead">
       <p>Add 6 drops of each oil into either a difuser with water or a carrier oil such as grape seed or jojoba oil. Difuser blends should be difused into a room and inhaled to provide desired effects. Oils blended into a carrier oil should be massaged into the bottoms of the feet or placed on the affected area for best results.</p>
 
       <?php
@@ -78,7 +78,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 while($row = $result->fetch_assoc()) {
                       $name = $row['name'];
                       $remedy = $row['remedy'];
-                      echo '<p style="color: darkviolet;"><strong>'.$name.' is good for '.$remedy.'</strong></p>';
+                      echo '<h5 style="color: darkviolet;"><strong>'.$name.' is good for '.$remedy.'</strong></h5>';
                 }
               }
             mysqli_close($link);

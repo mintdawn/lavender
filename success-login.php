@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container text-center" id="center-screen">
-      <h3>You have successfully logged in. You are being redirected to the main.</h3>
+      <h3>You have successfully logged in. You are being redirected to the main site.</h3>
     </div>
   </body>
 </html>
