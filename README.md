@@ -42,7 +42,7 @@ Modifications and fixes for final project submission.
 * I made some of the colors on the site have better contrast so color blind or contrast impaired users can see the text and images more clearly.
 * I added a Google font to the headings and navbar.
 * I added a background hover effect to the links in the navbar so they stand out better.
-* I added a light background to the sections on the support page so each section stood out better and it was a little easier to tell where each section started and ended. It is easier to read and follow.
+* I added a light background to the sections on the support page so each section stands out better and it is easier to read.
 * I changed the images on the about page to be full color images so they were easier to see for contrast impaired users. They were monochromatically filtered before.
 * The form fields for the create log in form are now "required".
 * The password reset page checks to see if the user is logged in or not and responds differently for each case.
